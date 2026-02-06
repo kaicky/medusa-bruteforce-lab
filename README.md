@@ -29,3 +29,14 @@ Este projeto foi desenvolvido como parte do desafio da DIO, com o objetivo de si
 ## Considerações Finais
 Projeto realizado para fins educacionais, em ambiente controlado.
 
+## Execução do Ataque SMB (Password Spraying)
+
+Neste teste foi realizado um ataque de password spraying no serviço SMB da máquina vulnerável, utilizando a ferramenta Medusa em ambiente controlado.
+
+### Enumeração de Usuários
+Foi utilizada uma lista simples de usuários previamente identificados durante a fase de enumeração.
+
+### Comando Utilizado
+
+```bash
+medusa -h 192.168.56.104 -U smb_users.txt -P senhas_spray.txt -M smbnt -t 2 -T 50
